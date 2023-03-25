@@ -75,6 +75,7 @@ export default function Header() {
 			justifyContent="center"
 			bg="white"
 			borderBottom="1px solid #eee"
+			zIndex={300}
 		>
 			<Wrapper display="flex" justifyContent="space-between" alignItems="center">
 				<Text

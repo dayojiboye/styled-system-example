@@ -48,18 +48,10 @@ export default function Customer() {
 					display="flex"
 					flexDirection={["column", null, "row"]}
 					gap={["40px", null, "32px"]}
-					marginTop="48px"
+					marginTop="60px"
 					justifyContent="center"
 				>
-					<Box
-						width="100%"
-						maxWidth="400px"
-						height="auto"
-						alignSelf="center"
-						position="relative"
-						zIndex={1}
-						bg="red"
-					>
+					<Box width="100%" maxWidth="400px" height="auto" alignSelf="center">
 						<BouncingImage
 							as="img"
 							alt="John & Jane"
