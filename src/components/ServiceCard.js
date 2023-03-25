@@ -18,7 +18,8 @@ export default function ServiceCard({ image, title, text, ...props }) {
 				as="img"
 				alt={title}
 				src={image}
-				width="275.501px"
+				maxWidth="275.501px"
+				width="100%"
 				height="183.101px"
 				margin="0 auto"
 			/>

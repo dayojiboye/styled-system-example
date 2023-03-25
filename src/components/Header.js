@@ -130,7 +130,7 @@ export default function Header() {
 						variant={["light", "outline"]}
 						px="16px"
 						textTransform="uppercase"
-						whiteSpace="nowrap"
+						textAlign="center"
 					>
 						Create a Free Account
 					</Button>

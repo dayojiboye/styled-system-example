@@ -38,7 +38,7 @@ export default function MedicalServices() {
 				<Box
 					display="grid"
 					marginTop="60px"
-					gridTemplateColumns="repeat(auto-fit,minmax(280px,1fr))"
+					gridTemplateColumns="repeat(auto-fit,minmax(250px,1fr))"
 					gap="10px"
 				>
 					<ServiceCard
