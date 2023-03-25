@@ -78,7 +78,7 @@ export default function Header() {
 			<Wrapper display="flex" justifyContent="space-between" alignItems="center">
 				<Text
 					as="a"
-					href="javascript:void(0)"
+					href="/"
 					fontWeight="700"
 					fontSize="24px"
 					color={openSideBar ? ["white", "blue"] : "blue"}
@@ -86,7 +86,7 @@ export default function Header() {
 					zIndex={250}
 					transition="color 0.5s ease-in-out"
 				>
-					BRANDLOGO
+					LOGO
 				</Text>
 
 				<Nav
@@ -100,7 +100,7 @@ export default function Header() {
 				>
 					<NavLink
 						as="a"
-						href="javascript:void(0)"
+						href="/"
 						fontWeight="500"
 						fontSize="18px"
 						color={["white", "blue"]}
@@ -112,7 +112,7 @@ export default function Header() {
 
 					<NavLink
 						as="a"
-						href="javascript:void(0)"
+						href="/"
 						fontWeight="500"
 						fontSize="18px"
 						color={["white", "blue"]}
@@ -123,6 +123,8 @@ export default function Header() {
 					</NavLink>
 
 					<Button
+						as="a"
+						href="/"
 						variant={["light", "outline"]}
 						px="16px"
 						textTransform="uppercase"

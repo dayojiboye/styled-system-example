@@ -26,6 +26,7 @@ const Button = styled("button").withConfig({
 			primary: {
 				color: "white",
 				bg: "green",
+				borderRadius: "5px",
 				// transition: "all 0.5s ease-in-out",
 				border: (theme) => `1px solid transparent`,
 				"&:hover": {
@@ -37,6 +38,7 @@ const Button = styled("button").withConfig({
 			light: {
 				color: "blue",
 				bg: "white",
+				borderRadius: "5px",
 			},
 			outline: {
 				color: "blue",

@@ -13,14 +13,14 @@ export default function HeroSection() {
 				flexDirection={["column", "", "row"]}
 				alignItems="center"
 				gap={["40px 0px", "", "0px 40px"]}
-				paddingY="40px"
+				paddingTop="40px"
+				paddingBottom="100px"
 			>
 				<Box flex="1">
 					<Text
 						as="h1"
 						fontSize={["32px", "40px"]}
 						maxWidth={["600px", "", "300px"]}
-						marginX={["auto", "", "0px"]}
 						color="blue"
 						fontWeight="700"
 						textAlign={["center", "", "left"]}
@@ -32,7 +32,6 @@ export default function HeroSection() {
 						fontSize={["16px", "18px"]}
 						maxWidth={["600px", "", "500px"]}
 						marginY="32px"
-						marginX={["auto", "", "0px"]}
 						textAlign={["center", "", "left"]}
 					>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis arcu at sem finibus
@@ -42,6 +41,8 @@ export default function HeroSection() {
 						congue. Vestibulum nec hendrerit nisi.
 					</Text>
 					<Button
+						as="a"
+						href="/"
 						variant="primary"
 						fontSize={["16px", "", "20px"]}
 						fontWeight="600"
