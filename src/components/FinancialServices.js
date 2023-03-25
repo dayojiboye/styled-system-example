@@ -7,7 +7,7 @@ import ImageOne from "assets/images/undraw_invest_88iw.png";
 import ImageTwo from "assets/images/undraw_business_deal_cpi9.png";
 import ImageThree from "assets/images/undraw_windy_day_x63l.png";
 
-export default function ServiceOneSection() {
+export default function FinancialServices() {
 	return (
 		<Box as="section" paddingY="100px">
 			<Wrapper>

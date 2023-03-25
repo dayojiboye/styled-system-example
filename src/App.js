@@ -1,7 +1,8 @@
 import SecuritySection from "components/SecuritySection";
-import ServiceOneSection from "components/ServiceOneSection";
+import FinancialServices from "components/FinancialServices";
 import HeroSection from "./components/HeroSection";
 import Layout from "./components/Layout";
+import MedicalServices from "components/MedicalServices";
 
 export default function App() {
 	return (
@@ -9,7 +10,8 @@ export default function App() {
 			<Layout>
 				<HeroSection />
 				<SecuritySection />
-				<ServiceOneSection />
+				<FinancialServices />
+				<MedicalServices />
 			</Layout>
 		</>
 	);
