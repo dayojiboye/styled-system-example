@@ -17,6 +17,7 @@ const Box = styled("div").withConfig({
 			property: "gap",
 			scale: "space",
 		},
+		transition: true
 	})
 );
 

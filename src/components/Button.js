@@ -1,5 +1,14 @@
 import styled from "styled-components";
-import { variant, space, typography, flexbox, color, layout, system } from "styled-system";
+import {
+	variant,
+	space,
+	typography,
+	flexbox,
+	color,
+	layout,
+	system,
+	position,
+} from "styled-system";
 import { props } from "@styled-system/should-forward-prop";
 
 const Button = styled("button").withConfig({
@@ -47,9 +56,15 @@ const Button = styled("button").withConfig({
 	${flexbox}
 	${color}
 	${layout}
+	${position}
 	${system({
 		textDecoration: true,
 		textTransform: true,
+		transition: {
+			property: "transition",
+			scale: "transition",
+		},
+		whiteSpace:true
 	})}
 `;
 

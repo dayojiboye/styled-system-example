@@ -7,15 +7,64 @@ import Button from "./Button";
 import Text from "./Text";
 import Wrapper from "./Wrapper";
 
-const StyledLink = styled(Text)`
+const Nav = styled(Box)`
+	@media (max-width: 639px) {
+		position: fixed;
+		top: 0;
+		right: ${(props) => (props.show ? 0 : "-100vw")};
+		z-index: 200;
+		background-color: rgba(18, 61, 138, 0.9);
+		width: 100%;
+		height: 100vh;
+		transition: right 0.5s ease-in-out;
+		overflow-y: auto;
+	}
+`;
+
+const NavLink = styled(Text)`
 	&:hover {
-		color: ${(props) => props.theme.colors.green};
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
+`;
+
+const Hamburger = styled(Box)`
+	position: relative;
+	z-index: 250;
+
+	#bar1,
+	#bar2,
+	#bar3 {
+		width: 30px;
+		height: 2px;
+		margin: 6px 0;
+		transition: all 0.4s ease-in-out;
+	}
+
+	#bar1 {
+		transform: ${(props) => (props.show ? "rotate(-45deg) translate(-4px, 6px)" : "none")};
+		background-color: ${(props) =>
+			props.show ? props.theme.colors.white : props.theme.colors.blue};
+	}
+
+	#bar2 {
+		opacity: ${(props) => (props.show ? 0 : 1)};
+		background-color: ${(props) => props.theme.colors.blue};
+	}
+
+	#bar3 {
+		transform: ${(props) => (props.show ? "rotate(45deg) translate(-5px, -8px)" : "none")};
+		background-color: ${(props) =>
+			props.show ? props.theme.colors.white : props.theme.colors.blue};
 	}
 `;
 
 export default function Header() {
+	const [openSideBar, setOpenSideBar] = React.useState(true);
+
 	return (
 		<Box
+			as="header"
 			position="fixed"
 			top={0}
 			left={0}
@@ -30,39 +79,68 @@ export default function Header() {
 					as="a"
 					href="javascript:void(0)"
 					fontWeight="700"
-					fontSize={["20px", "24px"]}
-					color="blue"
+					fontSize="24px"
+					color={openSideBar ? ["white", "blue"] : "blue"}
+					position="relative"
+					zIndex={250}
+					transition="color 0.5s ease-in-out"
 				>
 					BRANDLOGO
 				</Text>
 
-				<Box as="nav" display="flex" alignItems="center" gap="0px 35px">
-					<StyledLink
+				<Nav
+					as="nav"
+					display="flex"
+					flexDirection={["column", "row"]}
+					alignItems={["flex-start", "center"]}
+					gap={["48px 0px", "0px 35px"]}
+					p={["84px 35px 60px", "0px"]}
+					show={openSideBar}
+				>
+					<NavLink
 						as="a"
 						href="javascript:void(0)"
 						fontWeight="500"
-						fontSize={["16px", "18px"]}
-						color="blue"
+						fontSize="18px"
+						color={["white", "blue"]}
 						textTransform="uppercase"
+						width={["100%", "fit-content"]}
 					>
 						Link
-					</StyledLink>
+					</NavLink>
 
-					<StyledLink
+					<NavLink
 						as="a"
 						href="javascript:void(0)"
 						fontWeight="500"
-						fontSize={["16px", "18px"]}
-						color="blue"
+						fontSize="18px"
+						color={["white", "blue"]}
 						textTransform="uppercase"
+						width={["100%", "fit-content"]}
 					>
 						Link
-					</StyledLink>
+					</NavLink>
 
-					<Button variant="outline" px="16px" textTransform="uppercase">
+					<Button
+						variant={["light", "outline"]}
+						px="16px"
+						textTransform="uppercase"
+						whiteSpace="nowrap"
+					>
 						Create a Free Account
 					</Button>
-				</Box>
+				</Nav>
+
+				<Hamburger
+					role="button"
+					show={openSideBar}
+					display={["block", "none"]}
+					onClick={() => setOpenSideBar(!openSideBar)}
+				>
+					<Box id="bar1"></Box>
+					<Box id="bar2"></Box>
+					<Box id="bar3"></Box>
+				</Hamburger>
 			</Wrapper>
 		</Box>
 	);
