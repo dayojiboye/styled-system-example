@@ -3,6 +3,7 @@ import FinancialServices from "components/FinancialServices";
 import HeroSection from "./components/HeroSection";
 import Layout from "./components/Layout";
 import MedicalServices from "components/MedicalServices";
+import Customer from "components/Customer";
 
 export default function App() {
 	return (
@@ -12,6 +13,7 @@ export default function App() {
 				<SecuritySection />
 				<FinancialServices />
 				<MedicalServices />
+				<Customer />
 			</Layout>
 		</>
 	);
