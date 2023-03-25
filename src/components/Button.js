@@ -27,10 +27,11 @@ const Button = styled("button").withConfig({
 				color: "white",
 				bg: "green",
 				// transition: "all 0.5s ease-in-out",
+				border: (theme) => `1px solid transparent`,
 				"&:hover": {
 					color: "blue",
 					bg: "transparent",
-					border: (theme) => `1px solid ${theme.colors.blue}`,
+					borderColor: (theme) => `${theme.colors.blue}`,
 				},
 			},
 			light: {
@@ -64,7 +65,7 @@ const Button = styled("button").withConfig({
 			property: "transition",
 			scale: "transition",
 		},
-		whiteSpace:true
+		whiteSpace: true,
 	})}
 `;
 

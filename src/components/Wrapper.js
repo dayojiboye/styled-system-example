@@ -8,7 +8,8 @@ const Wrapper = styled(Box).withConfig({
 })`
 	width: 100%;
 	max-width: 1280px;
-	padding: 0px 16px;
+	padding-left: 16px;
+	padding-right: 16px;
 	margin: 0 auto;
 `;
 

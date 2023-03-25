@@ -11,9 +11,9 @@ const Nav = styled(Box)`
 	@media (max-width: 639px) {
 		position: fixed;
 		top: 0;
-		right: ${(props) => (props.show ? 0 : "-100vw")};
+		right: ${(props) => (props.show ? 0 : "-100%")};
 		z-index: 200;
-		background-color: rgba(18, 61, 138, 0.9);
+		background-color: rgba(18, 61, 138);
 		width: 100%;
 		height: 100vh;
 		transition: right 0.5s ease-in-out;
@@ -60,7 +60,7 @@ const Hamburger = styled(Box)`
 `;
 
 export default function Header() {
-	const [openSideBar, setOpenSideBar] = React.useState(true);
+	const [openSideBar, setOpenSideBar] = React.useState(false);
 
 	return (
 		<Box
@@ -73,6 +73,7 @@ export default function Header() {
 			display="flex"
 			alignItems="center"
 			justifyContent="center"
+			bg="white"
 		>
 			<Wrapper display="flex" justifyContent="space-between" alignItems="center">
 				<Text
@@ -135,7 +136,11 @@ export default function Header() {
 					role="button"
 					show={openSideBar}
 					display={["block", "none"]}
-					onClick={() => setOpenSideBar(!openSideBar)}
+					onClick={() => {
+						setOpenSideBar(!openSideBar);
+						document.documentElement.classList.toggle("_fixed");
+						document.body.classList.toggle("_fixed");
+					}}
 				>
 					<Box id="bar1"></Box>
 					<Box id="bar2"></Box>
