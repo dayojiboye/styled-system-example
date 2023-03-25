@@ -20,6 +20,7 @@ const Box = styled("div").withConfig({
 			scale: "space",
 		},
 		transition: true,
+		objectFit: true
 	})
 );
 

@@ -10,29 +10,29 @@ export default function HeroSection() {
 		<Box as="section">
 			<Wrapper
 				display="flex"
-				flexDirection={["column", "", "row"]}
+				flexDirection={["column", null, "row"]}
 				alignItems="center"
-				gap={["40px 0px", "", "0px 40px"]}
+				gap={["40px 0px", null, "0px 40px"]}
 				paddingTop="40px"
 				paddingBottom="100px"
 			>
 				<Box flex="1">
 					<Text
 						as="h1"
-						fontSize={["32px", "", "40px"]}
-						maxWidth={["600px", "", "300px"]}
+						fontSize={["32px", null, "40px"]}
+						maxWidth={["600px", null, "300px"]}
 						color="blue"
 						fontWeight="700"
-						textAlign={["center", "", "left"]}
+						textAlign={["center", null, "left"]}
 					>
 						HERO HEADER TEXT
 					</Text>
 					<Text
 						as="p"
 						fontSize={["16px", "18px"]}
-						maxWidth={["600px", "", "500px"]}
+						maxWidth={["600px", null, "500px"]}
 						marginY="32px"
-						textAlign={["center", "", "left"]}
+						textAlign={["center", null, "left"]}
 					>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis arcu at sem finibus
 						congue. Vestibulum nec hendrerit nisi. Lorem ipsum dolor sit amet, consectetur
@@ -44,10 +44,10 @@ export default function HeroSection() {
 						as="a"
 						href="/"
 						variant="primary"
-						fontSize={["16px", "", "20px"]}
+						fontSize={["16px", null, "20px"]}
 						fontWeight="600"
 						width="fit-content"
-						marginX={["auto", "", "0px"]}
+						marginX={["auto", null, "0px"]}
 					>
 						Create a Free Account
 					</Button>
