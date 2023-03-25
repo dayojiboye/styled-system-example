@@ -6,6 +6,7 @@ const theme = {
 		blue: "#083e9e",
 		green: "#30c57b",
 		silver: "silver",
+		lightPurple: "#e3ecff",
 	},
 };
 

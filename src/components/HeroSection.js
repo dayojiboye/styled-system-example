@@ -19,7 +19,7 @@ export default function HeroSection() {
 				<Box flex="1">
 					<Text
 						as="h1"
-						fontSize={["32px", "40px"]}
+						fontSize={["32px", "", "40px"]}
 						maxWidth={["600px", "", "300px"]}
 						color="blue"
 						fontWeight="700"
@@ -54,7 +54,14 @@ export default function HeroSection() {
 				</Box>
 
 				<Box flex="1">
-					<Box as="img" alt="Hero Section" src={HeroImg} width="100%" height="100%" />
+					<Box
+						as="img"
+						alt="Hero Section"
+						src={HeroImg}
+						width="100%"
+						height="100%"
+						borderRadius="5px"
+					/>
 				</Box>
 			</Wrapper>
 		</Box>
